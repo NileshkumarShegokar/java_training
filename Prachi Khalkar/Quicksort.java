@@ -40,6 +40,7 @@ public class Quicksort {
       void qsorting(int arr[],int low,int high)
       {
               int pi=partition(arr,low,high);
+              System.out.println("pi val:"+pi);
               if(low<pi-1)
               {
                    qsorting(arr,low,pi-1);
