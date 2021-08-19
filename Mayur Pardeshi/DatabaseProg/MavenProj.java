@@ -38,7 +38,10 @@ public class MavenProj {
         Connection conn=createConnection();
         System.out.println("********** DATA FROM STUDENT TABLE **********");
         ResultSet rs = conn.createStatement().executeQuery("select* from student");
+        System.out.println("ID"+"\t"+"NAME"+"\t"+"LOCATION"+"\t"+"AGE");
+        System.out.println("--+"+"\t"+"+----+"+"\t"+"+--------+"+"\t"+"+---");
         while (rs.next()) {
+
             System.out.println(rs.getInt(1 )+"\t"+rs.getString(2)+"\t"+rs.getString(3)+"\t"+rs.getInt(4));
         }
     }
@@ -135,7 +138,7 @@ public class MavenProj {
         MavenProj mv = new MavenProj();
         int opt;
         do {
-            System.out.println("**************************");
+            System.out.println("********** DATABASE OPERATIONS **********");
             System.out.println(" 1. INSERT \n 2. UPDATE \n 3. DELETE \n 4. DISPLAY \n 5. Exit");
             System.out.println("Please Select Option");
             opt = sc.nextInt();
