@@ -11,13 +11,6 @@ public class insertDb {
         Class.forName("com.mysql.cj.jdbc.Driver");
         Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/default", "root", "Riddhi@24");
         Statement stmt = connection.createStatement();
-
-        do {
-            System.out.println("**************************");
-            System.out.println(" 1. INSERT \n 2. UPDATE \n 3. DELETE \n 4. DISPLAY \n 5. Exit");
-            System.out.println("Please Select Option");
-            ch = sc.nextInt();
-            switch (ch) {
                 case 1:
                     System.out.println("Enter ID");
                     int id = sc.nextInt();
